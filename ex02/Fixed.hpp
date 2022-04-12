@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:47:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/12 18:35:10 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/12 19:15:55 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -28,14 +29,18 @@ public:
 	Fixed(const float flt);
 	~Fixed();
 
-	Fixed&	operator= (const Fixed &equal);
-	bool	operator> (const Fixed &fixed) const;
-	bool	operator< (const Fixed &fixed) const;
-	bool	operator!= (const Fixed &fixed) const;
-	bool	operator== (const Fixed &fixed) const;
-	bool	operator>= (const Fixed &fixed) const;
-	bool	operator<= (const Fixed &fixed) const;
+	Fixed&	operator= (const Fixed& equal);
+	bool	operator> (const Fixed& fixed) const;
+	bool	operator< (const Fixed& fixed) const;
+	bool	operator!= (const Fixed& fixed) const;
+	bool	operator== (const Fixed& fixed) const;
+	bool	operator>= (const Fixed& fixed) const;
+	bool	operator<= (const Fixed& fixed) const;
 
+	Fixed&	operator+ (const Fixed& fixed) const;
+	Fixed&	operator- (const Fixed& fixed) const;
+	Fixed&	operator* (const Fixed& fixed) const;
+	Fixed&	operator/ (const Fixed& fixed) const;
 	
 	int		getRawBits() const;
 	void	setRawBits(const int raw);
