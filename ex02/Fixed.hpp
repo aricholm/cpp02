@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:47:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/12 19:15:55 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/13 19:10:05 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	Fixed(const float flt);
 	~Fixed();
 
+	const static bool verbose = true;
+
 	Fixed&	operator= (const Fixed& equal);
 	bool	operator> (const Fixed& fixed) const;
 	bool	operator< (const Fixed& fixed) const;
@@ -37,10 +39,20 @@ public:
 	bool	operator>= (const Fixed& fixed) const;
 	bool	operator<= (const Fixed& fixed) const;
 
-	Fixed&	operator+ (const Fixed& fixed) const;
-	Fixed&	operator- (const Fixed& fixed) const;
-	Fixed&	operator* (const Fixed& fixed) const;
-	Fixed&	operator/ (const Fixed& fixed) const;
+	Fixed	operator+ (const Fixed& fixed) const;
+	Fixed	operator- (const Fixed& fixed) const;
+	Fixed	operator* (const Fixed& fixed) const;
+	Fixed	operator/ (const Fixed& fixed) const;
+
+	Fixed&	operator++();
+	Fixed	operator++(int);
+	Fixed&	operator--();
+	Fixed	operator--(int);
+
+	static const Fixed&	max(const Fixed& left, const Fixed& right);
+	static const Fixed&	min(const Fixed& left, const Fixed& right);
+	static Fixed&	max(Fixed& left, Fixed& right);
+	static Fixed&	min(Fixed& left, Fixed& right);
 	
 	int		getRawBits() const;
 	void	setRawBits(const int raw);
