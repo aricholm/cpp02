@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:47:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/13 19:10:05 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/20 20:19:44 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	Fixed(const float flt);
 	~Fixed();
 
-	const static bool verbose = true;
+	static bool verbose;
 
 	Fixed&	operator= (const Fixed& equal);
 	bool	operator> (const Fixed& fixed) const;

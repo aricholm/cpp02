@@ -6,11 +6,13 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:47:00 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/13 18:47:13 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/20 20:19:29 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+bool Fixed::verbose = false;
 
 // CONSTRUCTORS
 

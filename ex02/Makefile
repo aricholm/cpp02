@@ -6,11 +6,11 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/04/12 19:02:42 by aricholm         ###   ########.fr        #
+#    Updated: 2022/04/14 10:39:29 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fixed3
+NAME	=	fixed02
 SRC		=	main.cpp Fixed.cpp Fixed_functions.cpp Fixed_operators.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
